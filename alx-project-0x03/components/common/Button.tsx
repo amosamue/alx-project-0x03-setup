@@ -1,10 +1,5 @@
 // components/common/Button.tsx
-interface ButtonProps {
-  buttonLabel: string
-  buttonSize?: string
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
-  action?: () => void
-}
+import { ButtonProps } from "@/interface";
 
 const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
 
@@ -15,7 +10,6 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
     green: 'bg-green-500',
   }[buttonBackgroundColor] : 'bg-slate-500'
 
-  // note: we apply the same bg color for hover with /50 opacity
   return (
     <button
       onClick={action}
